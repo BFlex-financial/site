@@ -1,0 +1,55 @@
+@import url(variables.css);
+
+header {
+    position: fixed;
+    top: 0;
+    padding-block: .5vmin;
+    width: 100%;
+    height: 7vmin;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    margin: auto;
+}
+
+header section aside#logo {
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+}
+
+header section aside#logo img {
+    height: 100%;
+    width: 5vmin;
+}
+
+header section aside.navigation nav {
+    display: flex;
+    gap: 2.25vmin;
+}
+
+header section aside.navigation nav a {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+    font-family: var(--Poppins);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.196);
+    transition-duration: .4s;
+}
+
+header section aside.navigation nav a:hover {
+    transform: translateY(-.5vmin);
+    color: white;
+}
+
+header section aside.navigation nav a.marked {
+    transform: translateY(-.5vmin);
+    color: white;
+}
+
+header section aside.menu {
+    display: none;
+}
