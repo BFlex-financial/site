@@ -3,4 +3,37 @@
 section#about {
     height: 100vh;
     width: 100%;
+    background-color: #d8caa7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#about section.container {
+    width: 90%;
+    height: 90%;
+}
+
+section#about section.container aside.members {
+    width: 40%;
+}
+
+section#about section.container aside.members aside.images {
+    height: 5vmin;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+section#about section.container aside.members aside.images a {
+    height: 10vmin;
+    width: max-content;
+}
+
+section#about section.container aside.members aside.images a img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2vmin solid black;
 }

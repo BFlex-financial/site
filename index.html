@@ -16,18 +16,20 @@
     <link rel="stylesheet" href="content/styles/header.css">
     <link rel="stylesheet" href="content/styles/home.css">
     <link rel="stylesheet" href="content/styles/about.css">
+    <link rel="stylesheet" href="content/styles/developers.css">
     <title>BFlex Financial solutions</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <section>
             <aside id="logo" onclick="scrollSection(0)">
-                <img src="content/images/logonogb.png" alt="logo without background">
+                <img src="content/images/logonogb64.png" alt="logo without background">
             </aside>
             <aside class="navigation">
                 <nav>
                     <a href="#" id="homeBtn" onclick="event.preventDefault(); scrollSection(0)">Home</a>
                     <a href="#" id="aboutBtn" onclick="event.preventDefault(); scrollSection(1)">Sobre nós</a>
+                    <a href="#" id="devsBtn" onclick="event.preventDefault(); scrollSection(2)">Desenvolvedores</a>
                 </nav>
             </aside>
             <aside class="menu"></aside>
@@ -47,7 +49,37 @@
             </section>
         </section>
 
-        <section id="about"></section>
+        <section id="about">
+            <section class="container">
+                <aside class="members">
+                    <aside class="images">
+                        <a href="https://github.com/lucasFelixSilveira" target="_blank" rel="noopener noreferrer" title="Lucas Silveira">
+                            <img src="content/images/lucas_silveira.webp" alt="">
+                        </a>
+                        <a href="https://github.com/EngBandeira" target="_blank" rel="noopener noreferrer" title="Eduardo Bandeira">
+                            <img src="content/images/eduardo_bandeira.webp" alt="">
+                        </a>
+                        <a href="https://github.com/repiazza" target="_blank" rel="noopener noreferrer" title="Renato Fermi">
+                            <img src="content/images/renato_fermi.webp" alt="">
+                        </a>
+                        <a href="https://github.com/Hector2523" target="_blank" rel="noopener noreferrer" title="Heitor Ferreira">
+                            <img src="content/images/heitor_ferreira.webp" alt="">
+                        </a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" title="Unknow"></a>
+                    </aside>
+                    <aside class="description">
+                        <p>
+                            <strong>BFlex</strong> é um grupo de desenvolvedores estudiosos brasileiros, dedicados na computação. Jovens focados e empenhados em fazer os melhores produtos, para as melhores pessoas.
+                        </p>
+                    </aside>
+                </aside>
+                <aside class="project"></aside>
+            </section>
+        </section>
+
+        <section id="developers">
+            <section class="container"></section>
+        </section>
     </main>
 
     <footer></footer>

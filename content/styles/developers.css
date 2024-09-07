@@ -1,0 +1,15 @@
+@import url(variables.css);
+
+section#developers {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#developers section.container {
+    width: 90%;
+    height: 90%;
+}
