@@ -21,13 +21,13 @@
 <body>
     <header>
         <section>
-            <aside id="logo">
+            <aside id="logo" onclick="scrollSection(0)">
                 <img src="content/images/logonogb.png" alt="logo without background">
             </aside>
             <aside class="navigation">
                 <nav>
-                    <a href="#" id="homeBtn">Home</a>
-                    <a href="#" id="aboutBtn">About Us</a>
+                    <a href="#" id="homeBtn" onclick="event.preventDefault(); scrollSection(0)">Home</a>
+                    <a href="#" id="aboutBtn" onclick="event.preventDefault(); scrollSection(1)">Sobre nós</a>
                 </nav>
             </aside>
             <aside class="menu"></aside>
@@ -36,8 +36,15 @@
 
     <main>
         <section id="home">
-            <aside class="content"></aside>
-            <aside class="image"></aside>
+            <section class="container">
+                <aside class="content">
+                    <h1>BFlex F. Solutions</h1>
+                    <p>
+                        Nós da BFlex F. Solutions, Somos uma empresa Brasileira, empenhada em simplificar e melhorar o ramo financeiro para os desenvolvedores. Trazendo uma fácil gestão monetária, e uma fácil aplicação de nossas SDKs em seu sistema.
+                    </p>
+                </aside>
+                <aside class="image"></aside>
+            </section>
         </section>
 
         <section id="about"></section>

@@ -4,5 +4,35 @@ section#home {
     height: 100vh;
     width: 100%;
     background-color: #843057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+section#home section.container {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#home section.container aside.content {
+    width: 45%;
+}
+
+section#home section.container aside.content h1 {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+    color: white;
+    font-family: var(--Oswald);
+    font-size: 4rem;
+    margin-bottom: 2vmin;
+}
+
+section#home section.container aside.content p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+    color: whitesmoke;
+    font-family: var(--SUSE);
+    font-size: 1.4rem;
+    line-height: 1.15em;
+}

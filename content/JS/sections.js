@@ -2,6 +2,7 @@ const sections = ["home", "about"];
 const homeBtn = document.getElementById('homeBtn');
 const aboutBtn = document.getElementById('aboutBtn');
 var observer;
+var run = true;
 
 function initializeObserver(...v) {
 
@@ -35,14 +36,14 @@ function initializeObserver(...v) {
     })
 }
 
-window.addEventListener('DOMContentLoaded', setTimeout(() => { initializeObserver(homeBtn, aboutBtn) }, 500));
+window.addEventListener('DOMContentLoaded', () => { setTimeout(() => {initializeObserver(homeBtn, aboutBtn)}, 500) });
 window.addEventListener('scroll', initializeObserver(homeBtn, aboutBtn));
 
-async function scroll(section) {
+function scrollSection(section) {
     if (run == true && section !== undefined) {
         run = false;
 
-        await switch (section) {
+        switch (section) {
             case 0:
                 document.getElementById(sections[section]).scrollIntoView();
                 break
@@ -53,6 +54,18 @@ async function scroll(section) {
                 document.getElementById(sections[section]).scrollIntoView();
                 break
         }
+
+        changeRun();
+
+        return 0;
     }
 
+    console.warn("Scroll more calmaly")
+
+}
+
+function changeRun() {
+    setTimeout(() => {
+        run = true;
+    }, 500)
 }
