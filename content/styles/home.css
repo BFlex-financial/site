@@ -1,19 +1,19 @@
 @import url(variables.css);
 
 section#home {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
-    background-color: #843057;
+    background-color: #531d36;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 section#home section.container {
     height: 90%;
-    width: 90%;
+    width: 98%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -35,4 +35,38 @@ section#home section.container aside.content p {
     font-family: var(--SUSE);
     font-size: 1.4rem;
     line-height: 1.15em;
+}
+
+section#home section.container aside.content button {
+    margin-top: 2vmin;
+    width: 20%;
+    height: 5vmin;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.256);
+    letter-spacing: .1vmin;
+    background-color: #843057;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.163);
+    cursor: pointer;
+    transition-duration: .8s;
+}
+
+section#home section.container aside.content button:hover {
+    color: white;
+    box-shadow: 0px 0px 15px rgba(101, 100, 100, 0.204);
+}
+
+section#home section.container aside.image {
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+section#home section.container aside.image img {
+    height: 90%;
 }
