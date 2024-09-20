@@ -3,7 +3,7 @@
 section#developers {
     height: 100vh;
     width: 100%;
-    background-color: #5a5a5a;
+    background-color: var(--devs-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;

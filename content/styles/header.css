@@ -5,14 +5,16 @@ header {
     top: 0;
     padding-block: .5vmin;
     width: 100%;
+    background-color: var(--header-bg-color);
     height: 7vmin;
+    z-index: 7;
 }
 
 header section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
+    width: 90%;
     margin: auto;
 }
 
@@ -35,7 +37,7 @@ header section aside.navigation nav {
 header section aside.navigation nav a {
     text-decoration: none;
     padding: 1vmin;
-    color: rgb(223, 223, 223);
+    color: var(--header-nav-color-normal);
     font-family: var(--Poppins);
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.044);
     transition-duration: .4s;
@@ -43,29 +45,14 @@ header section aside.navigation nav a {
 
 header section aside.navigation nav a:hover {
     transform: translateY(-.5vmin);
-    color: white;
+    color: var(--header-nav-color-hover-and-marked);
 }
 
 header section aside.navigation nav a.marked {
     transform: translateY(-.5vmin);
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    color: white;
+    color: var(--header-nav-color-hover-and-marked);
 }
 
 header section aside.menu {
     display: none;
-}
-
-/* dark */
-
-header.dark section aside.navigation nav a {
-    color: black;
-}
-
-header.dark section aside.navigation nav a:hover {
-    color: rgb(55, 51, 51);
-}
-
-header.dark section aside.navigation nav a.marked {
-    color: rgb(55, 51, 51);
 }

@@ -23,7 +23,6 @@ function initializeObserver(...v) {
                 homeBtn.classList.remove('marked');
                 devsBtn.classList.remove('marked');
                 aboutBtn.classList.add('marked');
-                header.classList.remove('dark'); // REMOVE THIS IF THE MAIN COLOR IS LIGHT
                 return 0;
             }
 
