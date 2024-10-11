@@ -164,7 +164,7 @@ section.container aside#signin form aside div.eye::after {
     height: .4vmin;
     border-radius: 5px;
     width: 0%;
-    background-color: rgb(62, 61, 61);
+    background-color: var(--eye-scratch-color);
     transition-duration: .4s;
 }
 
@@ -174,12 +174,12 @@ section.container aside#signin form aside div.eye.marked::after {
 
 section.container aside#signin form aside div.eye svg {
     position: relative;
-    color: rgb(172, 170, 170);
+    color: var(--eye-svg-color);
     transition-duration: .4s;
 }
 
 section.container aside#signin form aside div.eye:hover svg {
-    color: gray;
+    color: var(--eye-svg-hover-color);
 }
 
 section.container aside#signin p.signinMailError,
@@ -292,7 +292,7 @@ section.container aside#signin aside.save div div#marker svg {
     transform-origin: center;
     height: 5%;
     width: auto;
-    color: white;
+    color: var(--checkbox-svg-color);
     opacity: 0;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
 }

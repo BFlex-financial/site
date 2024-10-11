@@ -91,7 +91,7 @@ section.container aside#forgot form aside div.eye::after {
     height: .4vmin;
     border-radius: 5px;
     width: 0%;
-    background-color: rgb(62, 61, 61);
+    background-color: var(--eye-scratch-color);
     transition-duration: .4s;
 }
 
@@ -101,12 +101,12 @@ section.container aside#forgot form aside div.eye.marked::after {
 
 section.container aside#forgot form aside div.eye svg {
     position: relative;
-    color: rgb(172, 170, 170);
+    color: var(--eye-svg-color);
     transition-duration: .4s;
 }
 
 section.container aside#forgot form aside div.eye:hover svg {
-    color: gray;
+    color: var(--eye-svg-hover-color);
 }
 
 section.container aside#forgot form aside.email p.email,

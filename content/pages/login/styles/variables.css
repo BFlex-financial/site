@@ -51,11 +51,21 @@
             }
         }
 
+        @layer checkbox {
+            :root {
+                --checkbox-svg-color: white;
+            }
+        }
+
         @layer commonColors {
             :root {
                 --main-bg-color: #F6F9FC;
+                --inputs-bg-color: white;
                 --text-dark-color: rgba(60, 66, 87, 0.93);
                 --text-light-color: rgb(72, 72, 72);
+                --eye-scratch-color: rgb(62, 61, 61);
+                --eye-svg-color: rgb(172, 170, 170);
+                --eye-svg-hover-color: gray;
                 --border-color-light: rgb(217, 216, 216);
                 --button-normal-bg-color: #AA2BB2;
                 --button-hover-bg-color: #900290;
@@ -100,6 +110,8 @@
     @layer register {
         :root {
             --h1-register-color: var(--text-dark-color);
+            --register-country-info-color: rgba(42, 41, 41, 0.403);
+            --register-country-bg-color: white;
             --register-country-color: rgba(64, 68, 81, 0.872);
             --send-register-button-normal-bg-color: var(--button-normal-bg-color);
             --send-register-button-hover-bg-color: var(--button-hover-bg-color);

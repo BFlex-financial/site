@@ -79,11 +79,10 @@ section.container aside#register aside.register form aside div#select {
     border: 1px solid var(--email-and-password-inputs-border-colors);
     border-radius: 5px;
     text-indent: 1.2vmin;
-    background-color: #fff;
+    background-color: var(--inputs-bg-color);
     flex: auto;
     font-family: var(--Poppins);
     white-space: nowrap;
-    color: black;
     font-weight: 400;
     letter-spacing: .2px;
     font-size: 1.5vmin;
@@ -100,7 +99,7 @@ section.container aside#register aside.register form aside div#select p.info {
     transform: translateY(-50%);
     font-weight: 600;
     opacity: 1;
-    color: rgba(42, 41, 41, 0.403);
+    color: var(--register-country-info-color);
     transition-duration: .2s;
 }
 
@@ -145,7 +144,7 @@ section.container aside#register aside.register form aside div#countrys {
     overflow: hidden;
     flex-direction: column;
     top: 110%;
-    background-color: #fff;
+    background-color: var(--register-country-bg-color);
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.225);
     z-index: 9;
     border-radius: 5px;
@@ -302,7 +301,7 @@ section.container aside#register form aside div.eye::after {
     height: .4vmin;
     border-radius: 5px;
     width: 0%;
-    background-color: rgb(62, 61, 61);
+    background-color: var(--eye-scratch-color);
     transition-duration: .4s;
 }
 
@@ -312,12 +311,12 @@ section.container aside#register form aside div.eye.marked::after {
 
 section.container aside#register form aside div.eye svg {
     position: relative;
-    color: rgb(172, 170, 170);
+    color: var(--eye-svg-color);
     transition-duration: .4s;
 }
 
 section.container aside#register form aside div.eye:hover svg {
-    color: gray;
+    color: var(--eye-svg-hover-color);
 }
 
 section.container aside#register aside.register aside#sendCreate {
