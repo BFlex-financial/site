@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/forgot.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="styles/twofactors.css">
+    <link rel="stylesheet" href="styles/forgotVerify.css">
+    <link rel="stylesheet" href="styles/registerVerify.css">
+    <link rel="stylesheet" href="styles/mediaquery.css">
+    <title>BFlex login</title>
+</head>
+<body>
+    <main>
+        <section>
+            <section class="container" id="sectionContainer">
+                <section id="main">
+                    <aside class="content" id="signin">
+                        <aside class="signin">
+                            <h1>Sign in to your account</h1>
+                            <form action="" method="post" novalidate>
+                                <aside class="email">
+                                    <p class="email">Email</p>
+                                    <div>
+                                        <input type="email" id="emailSignin" autocomplete="off" minlength="4" required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="signinMailError" id="signinMailErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="signinMailError"></span>
+                                    </p>
+                                </aside>
+                                <aside class="password">
+                                    <span>
+                                        <p class="password">Password</p>
+                                        <p id="goForgot">Forgot your password?</p>
+                                    </span>
+                                    <div>
+                                        <div id="signinEye" class="eye">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z"
+                                                    fill="currentColor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <input type="password" id="passwordSignin" autocomplete="off" minlength="4"
+                                            required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="signinPasswordError" id="signinPassErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="signinPasswordError"></span>
+                                    </p>
+                                </aside>
+                                <label for="rememberInput" class="rememberInputCheckbox">
+                                    <aside class="save">
+                                        <div class="mark">
+                                            <input type="checkbox" id="rememberInput" class="checkbox remember">
+                                            <span class="container">
+                                                <label for="rememberInput" class="labelOfCheckbox">
+                                                    <div id="marker">
+                                                        <svg height="14" width="14" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 14 14">
+                                                            <path
+                                                                d="M10.346 3.301a.929.929 0 0 1 1.37 0 1.076 1.076 0 0 1 0 1.456l-4.64 4.94a.929.929 0 0 1-1.37 0L3.284 7.123a1.076 1.076 0 0 1 0-1.456.929.929 0 0 1 1.37 0L6.39 7.513l3.955-4.212z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                </label>
+                                            </span>
+                                            <label for="rememberInput" class="info">Remember your login for a
+                                                week</label>
+                                        </div>
+                                    </aside>
+                                </label>
+                                <div>
+                                    <aside id="sendLogin">
+                                        <input type="submit" value="Sign in">
+                                    </aside>
+                                    <p class="signinAllError" id="SigninAllErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="signinAllError"></span>
+                                    </p>
+                                </div>
+                            </form>
+                        </aside>
+
+                        <aside id="verifySignin">
+                            <aside class="verify">
+                                <h1>Verify your account</h1>
+                                <p class="info">Please enter the code sent to your registered email address</p>
+                                <form action="" method="post" novalidate>
+                                    <aside class="numbers">
+                                        <div class="container">
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+
+                                    <div>
+                                        <aside id="sendSigninVerify">
+                                            <input type="submit" value="Verify">
+                                        </aside>
+                                        <p class="sendSigninCodeAllError" id="sendSigninCodeAllErrorContainer">
+                                            <img src="images/warning.png" alt="warning error">
+                                            <span id="signinCodeAllError"></span>
+                                        </p>
+                                    </div>
+                                </form>
+                            </aside>
+                        </aside>
+                    </aside>
+
+                    </aside>
+
+                    <aside id="forgot">
+                        <aside class="forgot">
+                            <h1>Reset your password</h1>
+                            <p class="info">Enter the email address associated with your account and we'll send you a
+                                link to reset your password.</p>
+                            <p class="passInfo">
+                                Enter your new password
+                            </p>
+                            <form action="" method="post" novalidate>
+                                <aside class="email">
+                                    <p class="email">Email</p>
+                                    <div>
+                                        <input type="email" id="forgotEmail" autocomplete="off" minlength="4" required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="forgotError" id="forgotErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="forgotError"></span>
+                                    </p>
+                                </aside>
+
+                                <aside class="password">
+                                    <p class="password">Password</p>
+                                    <div>
+                                        <div id="forgotEye" class="eye">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z"
+                                                    fill="currentColor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <input type="password" id="forgotPassword" autocomplete="off" minlength="4" required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="forgotPassError" id="forgotPassErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="forgotPassError"></span>
+                                    </p>
+                                </aside>
+
+                                <aside id="send" class="sendEmail">
+                                    <div id="sendForgot">
+                                        <input type="submit" value="Continue">
+                                    </div>
+                                    <p id="returnToLogin">Return to sign in</p>
+                                </aside>
+
+                                <aside id="send" class="newPassword">
+                                    <div id="sendForgotNewPass">
+                                        <input type="submit" value="Reset password">
+                                    </div>
+                                </aside>
+                            </form>
+                        </aside>
+
+                        <aside id="verifyForgot">
+                            <aside class="verify">
+                                <h1>Verify your account</h1>
+                                <p class="info">Please enter the code sent to your registered email address</p>
+                                <form action="" method="post" novalidate>
+                                    <aside class="numbers">
+                                        <div class="container">
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+
+                                    <div>
+                                        <aside id="sendForgotCode">
+                                            <input type="submit" value="Verify">
+                                        </aside>
+                                        <p class="sendForgotCodeAllError" id="sendForgotCodeAllErrorContainer">
+                                            <img src="images/warning.png" alt="warning error">
+                                            <span id="forgotCodeAllError"></span>
+                                        </p>
+                                    </div>
+                                </form>
+                            </aside>
+                        </aside>
+                    </aside>
+                    </aside>
+
+                    <aside id="register">
+                        <aside class="register">
+                            <h1>Create your account</h1>
+                            <form action="" method="post" novalidate>
+
+                                <aside class="email">
+                                    <p class="email">Email</p>
+                                    <div>
+                                        <input type="email" id="emailCreate" autocomplete="off" minlength="4" required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="createMailError" id="createMailErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="createMailError"></span>
+                                    </p>
+                                </aside>
+
+                                <aside class="name">
+                                    <p class="name">Full name</p>
+                                    <div>
+                                        <input type="text" id="fullnameCreate" autocomplete="off" minlength="4"
+                                            required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="createNameError" id="createNameErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="createNameError"></span>
+                                    </p>
+                                </aside>
+
+                                <aside class="countryContainer">
+                                    <p class="country">Country</p>
+                                    <div>
+                                        <div id="select">
+                                            <p class="info">Click to select</p>
+                                            <div id="selectedCountry">
+                                                <img src="" alt="">
+                                                <p></p>
+                                                <input type="text" id="countryNameInput" value="">
+                                            </div>
+                                        </div>
+                                        <div id="countrys">
+                                            <div class="search">
+                                                <input type="search" id="countrySearch" autocomplete="off"
+                                                    placeholder="Search">
+                                            </div>
+
+                                            <div id="names">
+
+                                            </div>
+                                        </div>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="createCountryError" id="createCountryErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="createCountryError"></span>
+                                    </p>
+                                </aside>
+
+                                <aside class="password">
+                                    <p class="password">Password</p>
+                                    <div>
+                                        <div id="createEye" class="eye">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z"
+                                                    fill="currentColor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        
+                                        <input type="password" id="passwordCreate" autocomplete="off" minlength="4"
+                                            required>
+                                        <div class="background"></div>
+                                    </div>
+                                    <p class="createPasswordError" id="createPassErrorContainer">
+                                        <img src="images/warning.png" alt="warning error">
+                                        <span id="createPasswordError"></span>
+                                    </p>
+                                </aside>
+
+
+                                <div>
+                                    <aside id="sendCreate">
+                                        <input type="submit" value="Create Account">
+                                    </aside>
+                                </div>
+                            </form>
+                        </aside>
+
+                        <aside id="verify">
+                            <aside class="verify">
+                                <h1>Verify your account</h1>
+                                <p class="info">Please enter the code sent to your registered email address</p>
+                                <form action="" method="post" novalidate>
+                                    <aside class="numbers">
+                                        <div class="container">
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                            <div>
+                                                <input type="number" class="createVerify" autocomplete="off"
+                                                    maxlength="1" required>
+                                                <div class="background"></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+                                    <label for="twoFactorsInput" class="twoFactorsInputCheckbox">
+                                        <aside class="save">
+                                            <div class="mark">
+                                                <input type="checkbox" id="twoFactorsInput" class="checkbox">
+                                                <span class="container">
+                                                    <label for="twoFactorsInput" class="labelOfCheckbox">
+                                                        <div id="marker">
+                                                            <svg height="14" width="14"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                                                <path
+                                                                    d="M10.346 3.301a.929.929 0 0 1 1.37 0 1.076 1.076 0 0 1 0 1.456l-4.64 4.94a.929.929 0 0 1-1.37 0L3.284 7.123a1.076 1.076 0 0 1 0-1.456.929.929 0 0 1 1.37 0L6.39 7.513l3.955-4.212z"
+                                                                    fill="currentColor"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </label>
+                                                </span>
+                                                <label for="twoFactorsInput" class="info">Enable Two-Factor
+                                                    Authentication</label>
+                                            </div>
+                                        </aside>
+                                    </label>
+                                    <div>
+                                        <aside id="sendCreateVerify">
+                                            <input type="submit" value="Verify">
+                                        </aside>
+                                        <p class="sendCreateAllError" id="sendCreateAllErrorContainer">
+                                            <img src="images/warning.png" alt="warning error">
+                                            <span id="createAllError"></span>
+                                        </p>
+                                    </div>
+                                </form>
+                            </aside>
+                        </aside>
+                    </aside>
+
+
+                </section>
+
+                <section class="new">
+                    <aside class="content">
+                        <span id="createAccount" class="marked">
+                            <p>New to BFlex?</p> <a href="#" id="goCreate">Create account</a>
+                        </span>
+                        <span id="loginAccount">
+                            <p>Already have an account?</p> <a href="#" id="goLogin">Sign in</a>
+                        </span>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="script/sections.js"></script>
+    <script src="script/countrysCreate.js"></script>
+    <script src="script/verifyLogin.js"></script>
+    <script src="script/verifyForgot.js"></script>
+    <script src="script/verifyCreate.js"></script>
+    <script src="script/createCodeVerify.js"></script>
+    <script src="script/showPasswords.js"></script>
+</body>
+</html>

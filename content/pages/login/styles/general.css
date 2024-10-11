@@ -1,0 +1,116 @@
+@import url(variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.container {
+    position: relative;
+    background-color: var(--main-section-bg-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    height: var(--responsive-main-section-height);
+    width: var(--responsive-main-section-width);
+    border: 3px solid white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container.register {
+    height: var(--responsive-main-section-register-height);
+}
+
+section.container section#main {
+    position: relative;
+    display: flex;
+    width: 28vw;
+    height: 100%;
+    transition-duration: .4s;
+}
+
+section.container section.new {
+    width: 100%;
+    height: 6vmin;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--create-account-bg-color);
+    position: absolute;
+    bottom: 0;
+}
+
+section.container section.new aside.content {
+    margin-top: 2vmin;
+}
+
+section.container section.new aside.content span.marked {
+    display: inline-flex;
+    gap: .8vmin;
+}
+
+section.container section.new aside.content span {
+    display: none;
+    gap: .8vmin;
+    transition-duration: .8s;
+}
+
+section.container section.new aside.content p {
+    margin-bottom: 1vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--create-account-color);
+    font-weight: 500;
+    letter-spacing: .2px;
+    font-size: .9em;
+    transition-duration: .8s;
+}
+
+section.container section.new aside.content a {
+    color: var(--create-account-normal-color);
+    font-family: var(--Poppins);
+    font-weight: 600;
+    letter-spacing: -.25px;
+    font-size: .8em;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: .8s;
+}
+
+section.container section.new aside.content a:hover {
+    color: var(--create-account-hover-color);
+    transform: translateY(-.5vmin);
+}

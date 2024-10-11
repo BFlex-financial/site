@@ -1,0 +1,265 @@
+@import url(variables.css);
+
+section.container aside#forgot {
+    position: absolute;
+    left: -100%;
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    padding-top: 2vmin;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: .4s;
+}
+
+section.container aside#forgot aside.forgot {
+    height: fit-content;
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.container aside#forgot h1 {
+    letter-spacing: -.2px;
+    margin-bottom: 2vmin;
+    font-size: 1.9em;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    font-family: var(--Roboto);
+    color: var(--h1-forgot-color);
+}
+
+section.container aside#forgot p.info,
+section.container aside#forgot p.passInfo {
+    font-family: var(--Fredoka);
+    margin-bottom: 2vmin;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--forgot-p-color);
+    line-height: normal;
+    font-weight: 400;
+    font-size: .9em;
+    transition-duration: .8s;
+}
+
+section.container aside#forgot p.passInfo {
+    display: none;
+}
+
+section.container aside#forgot form {
+    margin-top: 1vmin;
+    display: flex;
+    flex-direction: column;
+    gap: 4vmin;
+}
+
+section.container aside#forgot form aside.password,
+section.container aside#forgot form aside.newPassword {
+    display: none;
+}
+
+section.container aside#forgot form aside.email div,
+section.container aside#forgot form aside.password > div {
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
+section.container aside#forgot form aside div.eye {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    height: 100%;
+    width: fit-content;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+}
+
+section.container aside#forgot form aside div.eye::after {
+    content: '';
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    height: .4vmin;
+    border-radius: 5px;
+    width: 0%;
+    background-color: rgb(62, 61, 61);
+    transition-duration: .4s;
+}
+
+section.container aside#forgot form aside div.eye.marked::after {
+    width: 100%;
+}
+
+section.container aside#forgot form aside div.eye svg {
+    position: relative;
+    color: rgb(172, 170, 170);
+    transition-duration: .4s;
+}
+
+section.container aside#forgot form aside div.eye:hover svg {
+    color: gray;
+}
+
+section.container aside#forgot form aside.email p.email,
+section.container aside#forgot form aside.password p.password {
+    margin-bottom: 1vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--email-and-password-colors);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+}
+
+section.container aside#forgot form aside.email div div.background,
+section.container aside#forgot form aside.password div div.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    z-index: 1;
+    border-radius: 5px;
+    transform-origin: center;
+    background-color: var(--email-and-password-inputs-before-colors);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#forgot form aside.email input,
+section.container aside#forgot form aside.password input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 4vmin;
+    border: 1px solid var(--email-and-password-inputs-border-colors);
+    border-radius: 5px;
+    text-indent: 1.2vmin;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    flex: auto;
+    font-family: var(--Poppins);
+    white-space: nowrap;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 1.5vmin;
+    line-height: normal;
+    cursor: text;
+    display: inline-flex;
+}
+
+section.container aside#forgot form aside.email input:focus + div.background,
+section.container aside#forgot form aside.password input:focus + div.background {
+    width: 102%;
+    height: 120%;
+}
+
+section.container aside#forgot p.forgotError,
+section.container aside#forgot p.forgotPassError {
+    display: flex;
+    align-items: center;
+    margin-top: 1.2vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    color: var(--error-inputs-message-color);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+    margin-left: .4vmin;
+    gap: .4vmin;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+section.container aside#forgot p.forgotError.error,
+section.container aside#forgot p.forgotPassError.error {
+    opacity: 1;
+}
+
+section.container aside#forgot aside#send {
+    width: 100%;
+    min-height: 5vmin;
+}
+
+section.container aside#forgot aside#send p#returnToLogin {
+    margin-top: 3vmin;
+    text-align: center;
+    color: var(--back-to-login-normal-color);
+    font-family: var(--Poppins);
+    font-weight: 600;
+    letter-spacing: -.25px;
+    font-size: .9em;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+section.container aside#forgot aside#send p#returnToLogin:hover {
+    color: var(--back-to-login-hover-color);
+    transform: translateY(-.5vmin);
+}
+
+section.container aside#forgot aside#send p.forgotError img {
+    height: 100%;
+    width: auto;
+}
+
+section.container aside#forgot aside#send div {
+    position: relative;
+    width: 100%;
+    height: 5vmin;
+}
+
+section.container aside#forgot aside#send div input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    font-family: var(--Poppins);
+    color: var(--send-forgot-button-normal-color);
+    background-color: var(--send-forgot-button-normal-bg-color);
+    cursor: pointer;
+    border: none;
+    transition-duration: .8s;
+}
+
+section.container aside#forgot aside#send div input:hover {
+    background-color: var(--send-forgot-button-hover-bg-color);
+    color: var(--send-forgot-button-hover-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+}
+
+section.container aside#forgot aside#send div::before {
+    z-index: 1;
+    content: '';
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--send-forgot-bg-before-color);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#forgot aside#send div.marked::before {
+    height: 114%;
+    width: 103%;
+}

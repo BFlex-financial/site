@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="content/favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta name="keywords" content="">
     <meta name="author" content="BFlex corp.">
     <meta property="og:title" content="BFlex Financial solutions">
@@ -22,14 +23,23 @@
 <body>
     <header id="header">
         <section>
-            <aside id="logo" onclick="scrollSection(0)">
-                <img src="content/images/logonogb64.png" alt="logo without background">
-            </aside>
             <aside class="navigation">
+                <aside id="logo">
+                    <img src="content/images/logonogb.png" alt="">
+                </aside>
                 <nav>
                     <a href="#" id="homeBtn" onclick="event.preventDefault(); scrollSection(0)">Home</a>
                     <a href="#" id="aboutBtn" onclick="event.preventDefault(); scrollSection(1)">Sobre nós</a>
                     <a href="#" id="devsBtn" onclick="event.preventDefault(); scrollSection(2)">Desenvolvedores</a>
+                </nav>
+            </aside>
+
+            <aside class="login">
+                <nav>
+                    <a href="#" id="loginBtn" onclick="loginpage(0, event)">Login <span class="material-symbols-outlined">
+                        trending_flat
+                        </span></a>
+                    <a href="#" onclick="loginpage(1, event)">Register</a>
                 </nav>
             </aside>
             <aside class="menu"></aside>
@@ -62,5 +72,6 @@
     </main>
 
     <script src="content/JS/sections.js" defer="true"></script>
+    <script src="content/JS/loginpage.js" defer="true"></script>
 </body>
 </html>

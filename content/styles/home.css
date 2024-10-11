@@ -28,7 +28,7 @@ section#home section.container {
 }
 
 section#home section.container aside.content {
-    width: 45%;
+    width: 50%;
 }
 
 section#home section.container aside.content h1 {
@@ -71,7 +71,7 @@ section#home section.container aside.content button:hover {
 
 section#home section.container aside.image {
     position: relative;
-    max-width: 50%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: flex-end;

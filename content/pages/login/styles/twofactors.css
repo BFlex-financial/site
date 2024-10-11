@@ -1,0 +1,204 @@
+@import url(variables.css);
+
+section.container aside#signin.verify {
+    margin-top: 0;
+    transform: translateY(-100%);
+}
+
+section.container aside#signin aside#verifySignin {
+    position: absolute;
+    margin-top: 10%;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5vmin;
+}
+
+section.container aside#signin aside#verifySignin aside.verify {
+    height: fit-content;
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.container aside#signin aside#verifySignin h1 {
+    letter-spacing: -.2px;
+    margin-bottom: 1.2vmin;
+    font-size: 1.9em;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    font-family: var(--Roboto);
+    color: var(--h1-register-color);
+}
+
+section.container aside#signin aside#verifySignin p.info {
+    font-family: var(--Fredoka);
+    margin-bottom: 4vmin;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--forgot-p-color);
+    line-height: normal;
+    font-weight: 400;
+    font-size: 1.6vmin;
+    transition-duration: .8s;
+}
+
+section.container aside#signin aside#verifySignin form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+}
+
+section.container aside#signin aside#verifySignin form aside.numbers {
+    height: 10vmin;
+}
+
+section.container aside#signin aside#verifySignin form aside.numbers div.container {
+    display: flex;
+    justify-content: center;
+    gap: 2vmin;
+    width: 100%;
+    height: max-content;
+}
+
+section.container aside#signin aside#verifySignin form aside input[type="number"] {
+    position: relative;
+    z-index: 2;
+    width: 6vmin;
+    height: 8vmin;
+    text-align: center;
+    border: 1px solid var(--email-and-password-inputs-border-colors);
+    border-radius: 5px;
+    caret-color: transparent;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-family: var(--Poppins);
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 4vmin;
+    line-height: normal;
+    cursor: text;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) .4s;
+}
+
+section.container aside#signin aside#verifySignin form aside input[type="number"]:focus {
+    width: 8vmin;
+    height: 10vmin;
+}
+
+section.container aside#signin aside#verifySignin form aside input[type="number"]::-webkit-outer-spin-button,
+section.container aside#signin aside#verifySignin form aside input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+section.container aside#signin aside#verifySignin form aside.numbers div.container div {
+    position: relative;
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+}
+
+section.container aside#signin aside#verifySignin form aside.numbers div div.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    z-index: 1;
+    border-radius: 5px;
+    transform-origin: center;
+    background-color: var(--email-and-password-inputs-before-colors);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#signin aside#verifySignin form aside input[type="number"]:focus + div.background {
+    width: 110%;
+    height: 110%;
+}
+
+section.container aside#signin aside#verifySignin aside.save > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1vmin;
+}
+
+section.container aside#signin aside#verifySignin p.sendSigninCodeAllError {
+    display: flex;
+    align-items: center;
+    margin-top: 1.25vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    color: var(--error-inputs-message-color);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+    gap: .4vmin;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+section.container aside#signin aside#verifySignin p.sendSigninCodeAllError.error {
+    opacity: 1;
+}
+
+section.container aside#signin aside#verifySignin aside#sendSigninVerify {
+    position: relative;
+    width: 100%;
+    height: 5vmin;
+}
+
+section.container aside#signin aside#verifySignin aside#sendSigninVerify input, 
+section.container aside#signin aside#verifySignin aside#sendSigninVerify div#select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    font-family: var(--Poppins);
+    color: var(--send-login-button-normal-color);
+    background-color: var(--send-login-button-normal-bg-color);
+    cursor: pointer;
+    border: none;
+    transition-duration: .8s;
+}
+
+section.container aside#signin aside#verifySignin aside#sendSigninVerify input:hover {
+    background-color: var(--send-login-button-hover-bg-color);
+    color: var(--send-login-button-hover-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+}
+
+section.container aside#signin aside#verifySignin aside#sendSigninVerify::before {
+    z-index: 1;
+    content: '';
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--remember-bg-before-color);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#signin aside#verifySignin aside#sendSigninVerify.marked::before {
+    height: 114%;
+    width: 103%;
+}

@@ -1,0 +1,29 @@
+/* Extra Pequeno */
+@media (max-width: 575px) {
+    /* Estilos para dispositivos extra pequenos */
+}
+
+/* Pequeno */
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Estilos para dispositivos pequenos */
+}
+
+/* Médio */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para dispositivos médios */
+}
+
+/* Grande */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Estilos para dispositivos grandes */
+}
+
+/* Extra Grande */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    /* Estilos para dispositivos extra grandes */
+}
+
+/* Ultra Grande */
+@media (min-width: 1600px) {
+    /* Estilos para dispositivos ultra grandes */
+}

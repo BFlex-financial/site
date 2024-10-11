@@ -1,0 +1,398 @@
+@import url(variables.css);
+
+section.container aside#register {
+    position: absolute;
+    left: 100%;
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5vmin;
+    transition-duration: .4s;
+}
+
+section.container aside#register aside.register {
+    height: fit-content;
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.container aside#register aside.register h1 {
+    letter-spacing: -.2px;
+    margin-bottom: 2vmin;
+    font-size: 1.9em;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    font-family: var(--Roboto);
+    color: var(--h1-register-color);
+}
+
+section.container aside#register aside.register form {
+    display: flex;
+    flex-direction: column;
+}
+
+section.container aside#register aside.register form aside.email p.email,
+section.container aside#register aside.register form aside.password p.password,
+section.container aside#register aside.register form aside.name p.name,
+section.container aside#register aside.register form aside.countryContainer p.country {
+    margin-bottom: 1vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--email-and-password-colors);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+    transition-duration: .8s;
+}
+
+section.container aside#register aside.register form aside input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 4vmin;
+    border: 1px solid var(--email-and-password-inputs-border-colors);
+    border-radius: 5px;
+    text-indent: 1.2vmin;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    flex: auto;
+    font-family: var(--Poppins);
+    white-space: nowrap;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 1.5vmin;
+    line-height: normal;
+    cursor: text;
+}
+
+section.container aside#register aside.register form aside div#select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 4vmin;
+    border: 1px solid var(--email-and-password-inputs-border-colors);
+    border-radius: 5px;
+    text-indent: 1.2vmin;
+    background-color: #fff;
+    flex: auto;
+    font-family: var(--Poppins);
+    white-space: nowrap;
+    color: black;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 1.5vmin;
+    line-height: normal;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+section.container aside#register aside.register form aside div#select p.info {
+    position: absolute;
+    left: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    opacity: 1;
+    color: rgba(42, 41, 41, 0.403);
+    transition-duration: .2s;
+}
+
+section.container aside#register aside.register form aside div#select.marked p.info {
+    opacity: 0;
+}
+
+section.container aside#register aside.register form aside div#select input {
+    display: none;
+}
+
+section.container aside#register aside.register form aside div#select div#selectedCountry {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section.container aside#register aside.register form aside div#select div#selectedCountry img {
+    height: 0;
+    width: 16px;
+    transform-origin: center;
+    border-radius: 3px;
+    transition: .25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section.container aside#register aside.register form aside div#select div#selectedCountry img.show {
+    height: 25px;
+    width: 36px;
+    border-radius: 3px;
+}
+
+section.container aside#register aside.register form aside div#select div#selectedCountry p {
+    display: inline;
+    margin-left: -.4vmin;
+}
+
+section.container aside#register aside.register form aside div#countrys {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    top: 110%;
+    background-color: #fff;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.225);
+    z-index: 9;
+    border-radius: 5px;
+    height: max-content;
+    opacity: 0;
+    transform-origin: top;
+    width: 100%;
+    transition-duration: .4s;
+}
+
+section.container aside#register aside.register form aside div#countrys.marked {
+    opacity: 1;
+}
+
+section.container aside#register aside.register form aside div#countrys input[type="search"] {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 4vmin;
+    border: none;
+    border-bottom: 1px solid var(--email-and-password-inputs-border-colors);
+    text-indent: 1.2vmin;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    flex: auto;
+    font-family: var(--Poppins);
+    white-space: nowrap;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 1.5vmin;
+    line-height: normal;
+    cursor: text;
+}
+
+section.container aside#register aside.register form aside div#countrys input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+section.container aside#register aside.register form aside div#names {
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .4s;
+    max-height: 15vmin;
+}
+
+section.container aside#register aside.register form aside div#names div#country {
+    height: 3vmin;
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: .8s;
+}
+
+section.container aside#register aside.register form aside div#names div#country.marked {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section.container aside#register aside.register form aside div#names div#country:hover {
+    background-color: #eff6fb;
+}
+
+section.container aside#register aside.register form aside div#names div#country > div {
+    width: 96%;
+    height: 2.5vmin;
+    display: flex;
+    gap: .4vmin;
+    align-items: center;
+}
+
+section.container aside#register aside.register form aside div#names div#country > div img {
+    height: 16px;
+    width: 23px;
+    border-radius: 3px;
+}
+
+section.container aside#register aside.register form aside div#names div#country > div p {
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.045);
+    color: var(--register-country-color);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+}
+
+section.container aside#register aside.register form aside.email div div.background,
+section.container aside#register aside.register form aside.password div div.background,
+section.container aside#register aside.register form aside.name div div.background,
+section.container aside#register aside.register form aside.countryContainer div div.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    z-index: 1;
+    border-radius: 5px;
+    transform-origin: center;
+    background-color: var(--email-and-password-inputs-before-colors);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#register aside.register form aside.email,
+section.container aside#register aside.register form aside.password,
+section.container aside#register aside.register form aside.name,
+section.container aside#register aside.register form aside.countryContainer {
+    margin-bottom: 1vmin;
+}
+
+section.container aside#register aside.register form aside > div {
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
+section.container aside#register aside.register form aside input:focus + div.background {
+    width: 102%;
+    height: 120%;
+}
+
+section.container aside#register aside.register form aside div#select.marked + div.background {
+    width: 102%;
+    height: 120%;
+}
+
+section.container aside#register form aside div.eye {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    height: 100%;
+    width: fit-content;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+}
+
+section.container aside#register form aside div.eye::after {
+    content: '';
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    height: .4vmin;
+    border-radius: 5px;
+    width: 0%;
+    background-color: rgb(62, 61, 61);
+    transition-duration: .4s;
+}
+
+section.container aside#register form aside div.eye.marked::after {
+    width: 100%;
+}
+
+section.container aside#register form aside div.eye svg {
+    position: relative;
+    color: rgb(172, 170, 170);
+    transition-duration: .4s;
+}
+
+section.container aside#register form aside div.eye:hover svg {
+    color: gray;
+}
+
+section.container aside#register aside.register aside#sendCreate {
+    position: relative;
+    width: 100%;
+    height: 5vmin;
+}
+
+section.container aside#register aside.register aside#sendCreate input, 
+section.container aside#register aside.register aside#sendCreate div#select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    font-family: var(--Poppins);
+    color: var(--send-login-button-normal-color);
+    background-color: var(--send-login-button-normal-bg-color);
+    cursor: pointer;
+    border: none;
+    transition-duration: .8s;
+}
+
+section.container aside#register aside.register aside#sendCreate input:hover {
+    background-color: var(--send-login-button-hover-bg-color);
+    color: var(--send-login-button-hover-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.133);
+    border-radius: 8px;
+}
+
+section.container aside#register aside.register aside#sendCreate::before {
+    z-index: 1;
+    content: '';
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--remember-bg-before-color);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
+}
+
+section.container aside#register aside.register aside#sendCreate.marked::before {
+    height: 114%;
+    width: 103%;
+}
+
+section.container aside#register aside.register p.createMailError,
+section.container aside#register aside.register p.createNameError,
+section.container aside#register aside.register p.createPasswordError,
+section.container aside#register aside.register p.createCountryError {
+    display: flex;
+    align-items: center;
+    margin-top: .25vmin;
+    font-family: var(--Lato);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.086);
+    color: var(--error-inputs-message-color);
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-size: .85em;
+    gap: .4vmin;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+section.container aside#register aside.register p.createMailError.error,
+section.container aside#register aside.register p.createNameError.error,
+section.container aside#register aside.register p.createPasswordError.error,
+section.container aside#register aside.register p.createCountryError.error {
+    opacity: 1;
+}

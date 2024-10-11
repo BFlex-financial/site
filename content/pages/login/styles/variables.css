@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+@layer fonts {
+    :root {
+        --Roboto: Roboto;
+        --Poppins: Poppins;
+        --Lato: Lato;
+        --Fredoka: Fredoka;
+    }
+}
+
+@layer responsive {
+    :root {
+        --responsive-main-section-width: 28vw;
+        --responsive-main-section-height: 56vh;
+        --responsive-main-section-register-height: 68vh;
+    }
+}
+
+@layer light {
+
+    @layer general {
+
+        @layer body {
+            :root {
+                --body-bg-color: white;
+            }
+        }
+
+        @layer containerSection {
+            :root {
+                --main-section-bg-color: white;
+            }
+        }
+
+        @layer createAccount {
+            :root {
+                --create-account-normal-color: #635bff;
+                --create-account-hover-color: #6661c9;
+                --create-account-color: rgb(72, 72, 72);
+                --create-account-bg-color: #F6F9FC;
+            }
+        }
+
+        @layer error {
+            :root {
+                --error-inputs-message-color: rgb(205, 61, 100);
+            }
+        }
+
+        @layer commonColors {
+            :root {
+                --main-bg-color: #F6F9FC;
+                --text-dark-color: rgba(60, 66, 87, 0.93);
+                --text-light-color: rgb(72, 72, 72);
+                --border-color-light: rgb(217, 216, 216);
+                --button-normal-bg-color: #AA2BB2;
+                --button-hover-bg-color: #900290;
+            }
+        }
+    }
+
+    @layer login {
+        :root {
+            --h1-login-color: var(--text-dark-color);
+            --email-and-password-colors: var(--text-light-color);
+            --password-forgot-normal-color: #635bff;
+            --password-forgot-hover-color: #6661c9;
+            --email-and-password-inputs-border-colors: var(--border-color-light);
+            --email-and-password-inputs-before-colors: #b6d7edbe;
+            --remember-label-color: rgb(51, 51, 53);
+            --remember-border-color: var(--border-color-light);
+            --remember-normal-bg-color: white;
+            --remember-bg-checked-color: #cd42cdd0;
+            --remember-bg-before-color: #b6d7edbe;
+            --send-login-button-normal-bg-color: var(--button-normal-bg-color);
+            --send-login-button-hover-bg-color: var(--button-hover-bg-color);
+            --send-login-button-normal-color: whitesmoke;
+            --send-login-button-hover-color: white;
+        }
+    }
+
+    @layer forgot {
+        :root {
+            --h1-forgot-color: var(--text-dark-color);
+            --forgot-p-color: rgb(95, 94, 94);
+            --send-forgot-button-normal-bg-color: var(--button-normal-bg-color);
+            --send-forgot-button-hover-bg-color: var(--button-hover-bg-color);
+            --send-forgot-button-normal-color: whitesmoke;
+            --send-forgot-button-hover-color: white;
+            --send-forgot-bg-before-color: #b6d7edbe;
+            --back-to-login-normal-color: #635bff;
+            --back-to-login-hover-color: #6661c9;
+        }
+    }
+
+    @layer register {
+        :root {
+            --h1-register-color: var(--text-dark-color);
+            --register-country-color: rgba(64, 68, 81, 0.872);
+            --send-register-button-normal-bg-color: var(--button-normal-bg-color);
+            --send-register-button-hover-bg-color: var(--button-hover-bg-color);
+            --send-register-button-normal-color: whitesmoke;
+            --send-register-button-hover-color: white;
+            --send-register-bg-before-color: #b6d7edbe;
+        }
+    }
+}
