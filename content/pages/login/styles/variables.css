@@ -15,8 +15,8 @@
 @layer responsive {
     :root {
         --responsive-main-section-width: 28vw;
-        --responsive-main-section-height: 56vh;
-        --responsive-main-section-register-height: 68vh;
+        --responsive-main-section-height: 56vmin;
+        --responsive-main-section-register-height: 68vmin;
     }
 }
 

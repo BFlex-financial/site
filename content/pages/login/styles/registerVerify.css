@@ -142,7 +142,7 @@ section.container aside#register aside#verify aside.save div label.info {
     color: var(--remember-label-color);
     font-weight: 400;
     letter-spacing: .2px;
-    font-size: .9em;
+    font-size: .7em;
     height: 100%;
     display: flex;
     align-items: center;

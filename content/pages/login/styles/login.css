@@ -22,6 +22,10 @@ section.container aside#signin.content > aside.signin {
     gap: 2.5vmin;
 }
 
+section.container aside#signin.content > aside.signin::-webkit-scrollbar {
+    display: none;
+}
+
 section.container aside#signin h1 {
     letter-spacing: -.2px;
     margin-bottom: .4vmin;

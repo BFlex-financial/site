@@ -1,29 +1,724 @@
-/* Extra Pequeno */
 @media (max-width: 575px) {
-    /* Estilos para dispositivos extra pequenos */
+    :root {
+        --responsive-main-section-width: 90vw;
+    }
+
+    section.container aside#register aside.register {
+        padding-bottom: 30%;
+    }
+
+    section.container aside#forgot h1,
+    section.container aside#register aside.register h1,
+    section.container aside#forgot aside#verifyForgot h1,
+    section.container aside#register aside#verify h1,
+    section.container aside#signin aside#verifySignin h1 {
+        font-size: 1.4em;
+    }
+
+    section.container aside#signin h1 {
+        font-size: 1.2em;
+    }
+
+    section.container aside#forgot p.info,
+    section.container aside#forgot p.passInfo,
+    section.container aside#signin aside#verifySignin p.info,
+    section.container aside#register aside#verify p.info {
+        font-size: .8em;
+    }
+
+    section.container aside#signin aside.save div label.info,
+    section.container aside#signin form aside.password p#goForgot,
+    section.container aside#signin form aside.email p.email,
+    section.container aside#signin form aside.password p.password,
+    section.container aside#forgot form aside.email p.email,
+    section.container aside#forgot form aside.password p.password,
+    section.container aside#register aside.register form aside.email p.email,
+    section.container aside#register aside.register form aside.password p.password,
+    section.container aside#register aside.register form aside.name p.name,
+    section.container aside#register aside.register form aside.countryContainer p.country {
+        font-size: .75em;
+    }
+
+    section.container aside#signin form aside.email input,
+    section.container aside#signin form aside.password input,
+    section.container aside#forgot form aside.email input,
+    section.container aside#forgot form aside.password input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside div#select {
+        height: 10vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#signin form aside div.eye svg,
+    section.container aside#forgot form aside div.eye svg,
+    section.container aside#register form aside div.eye svg {
+        height: 4vmin;
+    }
+    
+    section.container aside#signin label.rememberInputCheckbox {
+        margin-bottom: 3vh;
+    }
+
+    section.container aside#register aside.register form aside div#names {
+        max-height: 20vmin;
+    }
+
+    section.container aside#register aside.register form aside div#countrys input[type="search"] {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country {
+        height: 6vmin;
+        padding-bottom: 1vmin;
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 1;
+        transition: .8s;
+    }
+
+    section.container aside#signin aside#verifySignin form aside input[type="number"],
+    section.container aside#forgot aside#verifyForgot form aside input {
+        width: 10vmin;
+        height: 12vmin;
+    }
+
+    section.container aside#signin aside#verifySignin form,
+    section.container aside#forgot aside#verifyForgot form {
+        gap: 10vmin;
+    }
+
+    section.container aside#register aside.register form aside div#select div#selectedCountry img.show {
+        height: 18px;
+        width: 29px;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country > div {
+        width: 96%;
+        height: 100%;
+        display: flex;
+        gap: 1vmin;
+        align-items: center;
+    }
+    
+
+    section.container aside#register aside.register form aside div#names div#country > div p {
+        font-size: .75em;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        margin-top: 5vh;
+    }
+
+    section.container aside#signin aside#sendLogin input,
+    section.container aside#forgot aside#send div input,
+    section.container aside#signin aside#verifySignin aside#sendSigninVerify input,
+    section.container aside#forgot aside#verifyForgot aside#sendForgotCode input,
+    section.container aside#register aside#verify aside#sendCreateVerify input,
+    section.container aside#register aside.register aside#sendCreate input {
+        height: 8vmin;
+        font-size: .8em;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        font-size: .8em;
+    }
+
+    section.container section.new {
+        height: 9vmin;
+    }
+
+    section.container section.new aside.content p,
+    section.container section.new aside.content a {
+        font-size: .8em;
+    }
+
+    section.container aside#signin p.signinMailError,
+    section.container aside#signin p.signinPasswordError,
+    section.container aside#signin p.signinAllError,
+    section.container aside#forgot p.forgotError,
+    section.container aside#forgot p.forgotPassError {
+        font-size: .75em;
+    }
+
+    section.container aside#signin p.signinMailError img,
+    section.container aside#signin p.signinPasswordError img,
+    section.container aside#signin p.signinAllError img,
+    section.container aside#forgot p.forgotError img,
+    section.container aside#forgot p.forgotPassError img {
+        height: 4.5vmin;
+    }
 }
 
-/* Pequeno */
 @media (min-width: 576px) and (max-width: 767px) {
-    /* Estilos para dispositivos pequenos */
+    :root {
+        --responsive-main-section-width: 80vw;
+    }
+
+    section.container aside#signin,
+    section.container aside#forgot,
+    section.container aside#register {
+        margin-top: 5%;
+    }
+    
 }
 
-/* Médio */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para dispositivos médios */
+    :root {
+        --responsive-main-section-width: 70vw;
+    }
+
+    section.container aside#signin,
+    section.container aside#forgot,
+    section.container aside#register {
+        margin-top: 5%;
+    }
 }
 
-/* Grande */
-@media (min-width: 992px) and (max-width: 1199px) {
-    /* Estilos para dispositivos grandes */
+@media (min-height: 761px) and (max-height: 890px) {
+    :root {
+        --responsive-main-section-height: 60vh;
+        --responsive-main-section-register-height: 75vh;
+    }
+
+    section.container aside#signin h1,
+    section.container aside#forgot h1,
+    section.container aside#register aside.register h1 {
+        font-size: 1.5em;
+    }
 }
 
-/* Extra Grande */
-@media (min-width: 1200px) and (max-width: 1599px) {
-    /* Estilos para dispositivos extra grandes */
+@media (min-height: 652px) and (max-height: 760px) {
+    :root {
+        --responsive-main-section-height: 66vh;
+        --responsive-main-section-register-height: 82vh;
+    }
+
+    section.container aside#signin h1,
+    section.container aside#forgot h1,
+    section.container aside#register aside.register h1 {
+        font-size: 1.5em;
+    }
+
+    section.container aside#signin aside.save div label.info {
+        font-size: .8em;
+    }
 }
 
-/* Ultra Grande */
-@media (min-width: 1600px) {
-    /* Estilos para dispositivos ultra grandes */
+@media (min-height: 580px) and (max-height: 651px) { 
+    :root {
+        --responsive-main-section-height: 70vh;
+        --responsive-main-section-register-height: 86vh;
+    }
+
+    section.container aside#signin h1,
+    section.container aside#register aside.register h1,
+    section.container aside#signin aside#verifySignin h1,
+    section.container aside#forgot h1 {
+        font-size: 1.5em;
+    }
+
+    section.container aside#forgot p.info,
+    section.container aside#forgot p.passInfo {
+        font-size: .9em;
+    }
+
+    section.container aside#signin aside.save div label.info {
+        font-size: .8em;
+    }
+
+    section.container section.new aside.content p,
+    section.container section.new aside.content a {
+        font-size: .8em;
+    }
+}
+
+@media (min-height: 396px) and (max-height: 580px) {
+    :root {
+        --responsive-main-section-height: 80vh;
+        --responsive-main-section-register-height: 86vh;
+    }
+
+    section.container aside#register aside.register {
+        padding-bottom: 30%;
+    }
+
+    section.container aside#signin h1,
+    section.container aside#signin aside#verifySignin h1,
+    section.container aside#forgot aside#verifyForgot h1,
+    section.container aside#register aside#verify h1,
+    section.container aside#register aside.register h1 {
+        font-size: 1.2em;
+    }
+
+    section.container aside#forgot h1 {
+        font-size: 1.4em;
+    }
+
+    section.container aside#forgot p.info,
+    section.container aside#forgot p.passInfo,
+    section.container aside#signin aside#verifySignin p.info,
+    section.container aside#register aside#verify p.info {
+        font-size: .8em;
+    }
+
+    section.container aside#register aside.register form aside div#names {
+        max-height: 20vmin;
+    }
+
+    section.container aside#register aside.register form aside div#countrys input[type="search"] {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country {
+        height: 6vmin;
+        padding-bottom: 1vmin;
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 1;
+        transition: .8s;
+    }
+
+    section.container aside#register aside.register form aside div#select div#selectedCountry img.show {
+        height: 18px;
+        width: 29px;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country > div {
+        width: 96%;
+        height: 100%;
+        display: flex;
+        gap: 1vmin;
+        align-items: center;
+    }
+    
+
+    section.container aside#register aside.register form aside div#names div#country > div p {
+        font-size: .75em;
+    }
+
+    section.container aside#signin aside.save div label.info,
+    section.container aside#signin form aside.password p#goForgot,
+    section.container aside#signin form aside.email p.email,
+    section.container aside#signin form aside.password p.password,
+    section.container aside#register aside.register form aside.email p.email,
+    section.container aside#register aside.register form aside.password p.password,
+    section.container aside#register aside.register form aside.name p.name,
+    section.container aside#register aside.register form aside.countryContainer p.country {
+        font-size: .75em;
+    }
+
+    section.container aside#signin form aside.email input,
+    section.container aside#signin form aside.password input,
+    section.container aside#forgot form aside.email input,
+    section.container aside#forgot form aside.password input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside div#select {
+        height: 6vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#signin form aside div.eye svg,
+    section.container aside#forgot form aside div.eye svg,
+    section.container aside#register form aside div.eye svg {
+        height: 4vmin;
+    }
+
+    section.container aside#signin aside#sendLogin input,
+    section.container aside#forgot aside#send div input,
+    section.container aside#signin aside#verifySignin aside#sendSigninVerify input,
+    section.container aside#register aside#verify aside#sendCreateVerify input,
+    section.container aside#forgot aside#verifyForgot aside#sendForgotCode input,
+    section.container aside#register aside.register aside#sendCreate input {
+        height: 6vmin;
+        font-size: .8em;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        font-size: .8em;
+    }
+
+    section.container section.new {
+        height: 9vmin;
+    }
+
+    section.container section.new aside.content p,
+    section.container section.new aside.content a {
+        font-size: .8em;
+    }
+
+    section.container aside#signin p.signinMailError,
+    section.container aside#signin p.signinPasswordError,
+    section.container aside#signin p.signinAllError,
+    section.container aside#forgot p.forgotError,
+    section.container aside#forgot p.forgotPassError {
+        font-size: .75em;
+    }
+
+    section.container aside#signin p.signinMailError img,
+    section.container aside#signin p.signinPasswordError img,
+    section.container aside#signin p.signinAllError img,
+    section.container aside#forgot p.forgotError img,
+    section.container aside#forgot p.forgotPassError img {
+        height: 4.5vmin;
+    }
+}
+
+@media (min-height: 330px) and (max-height: 395px) {
+    :root {
+        --responsive-main-section-height: 90vh;
+        --responsive-main-section-register-height: 86vh;
+    }
+
+    section.container aside#register aside.register {
+        padding-bottom: 30%;
+    }
+
+    section.container aside#forgot h1,
+    section.container aside#register aside.register h1,
+    section.container aside#forgot aside#verifyForgot h1,
+    section.container aside#register aside#verify h1,
+    section.container aside#signin aside#verifySignin h1 {
+        font-size: 1.4em;
+    }
+
+    section.container aside#signin h1 {
+        font-size: 1.2em;
+    }
+
+    section.container aside#forgot p.info,
+    section.container aside#forgot p.passInfo,
+    section.container aside#signin aside#verifySignin p.info,
+    section.container aside#register aside#verify p.info {
+        font-size: .8em;
+    }
+
+    section.container aside#signin aside.save div label.info,
+    section.container aside#signin form aside.password p#goForgot,
+    section.container aside#signin form aside.email p.email,
+    section.container aside#signin form aside.password p.password,
+    section.container aside#forgot form aside.email p.email,
+    section.container aside#forgot form aside.password p.password,
+    section.container aside#register aside.register form aside.email p.email,
+    section.container aside#register aside.register form aside.password p.password,
+    section.container aside#register aside.register form aside.name p.name,
+    section.container aside#register aside.register form aside.countryContainer p.country {
+        font-size: .75em;
+    }
+
+    section.container aside#signin form aside.email input,
+    section.container aside#signin form aside.password input,
+    section.container aside#forgot form aside.email input,
+    section.container aside#forgot form aside.password input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside div#select {
+        height: 10vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#signin form aside div.eye svg,
+    section.container aside#forgot form aside div.eye svg,
+    section.container aside#register form aside div.eye svg {
+        height: 4vmin;
+    }
+    
+    section.container aside#signin label.rememberInputCheckbox {
+        margin-bottom: 3vh;
+    }
+
+    section.container aside#register aside.register form aside div#names {
+        max-height: 20vmin;
+    }
+
+    section.container aside#register aside.register form aside div#countrys input[type="search"] {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country {
+        height: 6vmin;
+        padding-bottom: 1vmin;
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 1;
+        transition: .8s;
+    }
+
+    section.container aside#signin aside#verifySignin form aside input[type="number"],
+    section.container aside#forgot aside#verifyForgot form aside input {
+        width: 10vmin;
+        height: 12vmin;
+    }
+
+    section.container aside#signin aside#verifySignin form,
+    section.container aside#forgot aside#verifyForgot form {
+        gap: 10vmin;
+    }
+
+    section.container aside#register aside.register form aside div#select div#selectedCountry img.show {
+        height: 18px;
+        width: 29px;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country > div {
+        width: 96%;
+        height: 100%;
+        display: flex;
+        gap: 1vmin;
+        align-items: center;
+    }
+    
+
+    section.container aside#register aside.register form aside div#names div#country > div p {
+        font-size: .75em;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        margin-top: 5vh;
+    }
+
+    section.container aside#signin aside#sendLogin input,
+    section.container aside#forgot aside#send div input,
+    section.container aside#signin aside#verifySignin aside#sendSigninVerify input,
+    section.container aside#forgot aside#verifyForgot aside#sendForgotCode input,
+    section.container aside#register aside#verify aside#sendCreateVerify input,
+    section.container aside#register aside.register aside#sendCreate input {
+        height: 8vmin;
+        font-size: .8em;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        font-size: .8em;
+    }
+
+    section.container section.new {
+        height: 9vmin;
+    }
+
+    section.container section.new aside.content p,
+    section.container section.new aside.content a {
+        font-size: .8em;
+    }
+
+    section.container aside#signin p.signinMailError,
+    section.container aside#signin p.signinPasswordError,
+    section.container aside#signin p.signinAllError,
+    section.container aside#forgot p.forgotError,
+    section.container aside#forgot p.forgotPassError {
+        font-size: .75em;
+    }
+
+    section.container aside#signin p.signinMailError img,
+    section.container aside#signin p.signinPasswordError img,
+    section.container aside#signin p.signinAllError img,
+    section.container aside#forgot p.forgotError img,
+    section.container aside#forgot p.forgotPassError img {
+        height: 4.5vmin;
+    }
+}
+
+@media (max-height: 329px) {
+    :root {
+        --responsive-main-section-height: 95vh;
+        --responsive-main-section-register-height: 100vh;
+    }
+
+    section.container aside#register aside.register {
+        padding-bottom: 30%;
+    }
+
+    section.container aside#signin.content > aside.signin {
+        overflow-y: scroll;
+        padding-bottom: 30%;
+    }
+
+    section.container aside#signin h1,
+    section.container aside#register aside.register h1,
+    section.container aside#forgot aside#verifyForgot h1,
+    section.container aside#register aside#verify h1,
+    section.container aside#signin aside#verifySignin h1 {
+        font-size: 1.2em;
+    }
+
+    section.container aside#signin aside#verifySignin p.info,
+    section.container aside#register aside#verify p.info {
+        font-size: .8em;
+    }
+
+    section.container aside#forgot h1 {
+        font-size: 1.4em;
+    }
+
+    section.container aside#forgot p.info,
+    section.container aside#forgot p.passInfo {
+        font-size: .6em;
+    }
+
+    section.container aside#signin aside.save div label.info,
+    section.container aside#signin form aside.password p#goForgot,
+    section.container aside#signin form aside.email p.email,
+    section.container aside#signin form aside.password p.password,
+    section.container aside#forgot form aside.email p.email,
+    section.container aside#forgot form aside.password p.password,
+    section.container aside#register aside.register form aside.email p.email,
+    section.container aside#register aside.register form aside.password p.password,
+    section.container aside#register aside.register form aside.name p.name,
+    section.container aside#register aside.register form aside.countryContainer p.country {
+        font-size: .7em;
+    }
+
+    section.container aside#signin form aside.email input,
+    section.container aside#signin form aside.password input,
+    section.container aside#forgot form aside.email input,
+    section.container aside#forgot form aside.password input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside div#select {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#register aside.register form aside div#names {
+        max-height: 20vmin;
+    }
+
+    section.container aside#register aside.register form aside div#countrys input[type="search"] {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country {
+        height: 7vmin;
+        padding-bottom: 2vmin;
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 1;
+        transition: .8s;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country > div {
+        width: 96%;
+        height: 100%;
+        display: flex;
+        gap: 1vmin;
+        align-items: center;
+    }
+
+    section.container aside#register aside.register form aside div#select div#selectedCountry img.show {
+        height: 18px;
+        width: 29px;
+    }
+
+    section.container aside#register aside.register form aside div#names div#country > div p {
+        font-size: .75em;
+    }
+
+    section.container aside#signin form aside div.eye svg,
+    section.container aside#forgot form aside div.eye svg,
+    section.container aside#register form aside div.eye svg {
+        height: 6vmin;
+    }
+    
+    section.container aside#signin label.rememberInputCheckbox {
+        margin-bottom: 3vh;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        margin-top: 5vh;
+    }
+
+    section.container aside#signin aside#sendLogin input,
+    section.container aside#forgot aside#send div input,
+    section.container aside#signin aside#verifySignin aside#sendSigninVerify input,
+    section.container aside#forgot aside#verifyForgot aside#sendForgotCode input,
+    section.container aside#register aside#verify aside#sendCreateVerify input,
+    section.container aside#register aside.register aside#sendCreate input {
+        height: 8vmin;
+        font-size: .8em;
+    }
+
+    section.container aside#signin aside#verifySignin form aside input[type="number"],
+    section.container aside#forgot aside#verifyForgot form aside input {
+        width: 10vmin;
+        height: 12vmin;
+    }
+
+    section.container aside#signin aside#verifySignin form,
+    section.container aside#forgot aside#verifyForgot form {
+        gap: 10vmin;
+    }
+
+    section.container aside#forgot aside#send p#returnToLogin {
+        font-size: .8em;
+    }
+
+    section.container section.new {
+        height: 9vmin;
+    }
+
+    section.container section.new aside.content p,
+    section.container section.new aside.content a {
+        font-size: .75em;
+    }
+
+    section.container aside#signin p.signinMailError,
+    section.container aside#signin p.signinPasswordError,
+    section.container aside#signin p.signinAllError,
+    section.container aside#forgot p.forgotError,
+    section.container aside#forgot p.forgotPassError {
+        font-size: .75em;
+    }
+
+    section.container aside#signin p.signinMailError img,
+    section.container aside#signin p.signinPasswordError img,
+    section.container aside#signin p.signinAllError img,
+    section.container aside#forgot p.forgotError img,
+    section.container aside#forgot p.forgotPassError img {
+        height: 4.5vmin;
+    }
+}
+
+@media (max-height: 260px) {
+    section.container aside#signin form aside.email input,
+    section.container aside#signin form aside.password input,
+    section.container aside#forgot form aside.email input,
+    section.container aside#forgot form aside.password input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside input,
+    section.container aside#register aside.register form aside div#select {
+        height: 8vmin;
+        font-size: .7em;
+    }
+
+    section.container aside#signin aside#sendLogin input,
+    section.container aside#forgot aside#send div input,
+    section.container aside#register aside.register aside#sendCreate input {
+        height: 12vmin;
+        font-size: .8em;
+    }
 }
